@@ -11,6 +11,8 @@
 #include <memory>
 #include "../neural/Synapse.h"
 #include "../neural/InputNeuron.h"
+#include "../neural/Layer.h"
+#include "../neural/InputLayer.h"
 
 using namespace std;
 using namespace neural;
@@ -22,7 +24,9 @@ int main() {
 	Synapse *synapse = new Synapse(inputNeuron, 2);
 	inputNeuron->setInput(10);
 	cout <<"Si la sinapsis es correcta esto debería ser 20: " << synapse->propagate() << endl;
+	Layer *layer = new InputLayer();
 	delete synapse;
+	delete layer;
 
 	return 0;
 }

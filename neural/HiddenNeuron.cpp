@@ -6,16 +6,16 @@
  */
 
 #include "HiddenNeuron.h"
+#include "InputNeuron.h"
+#include "Layer.h"
 
 namespace neural {
 
-HiddenNeuron::HiddenNeuron() {
-	// TODO Auto-generated constructor stub
-
+HiddenNeuron::HiddenNeuron(Layer layer, double bias) {
+	this->bias = bias;
 }
 
 HiddenNeuron::~HiddenNeuron() {
-	// TODO Auto-generated destructor stub
 }
 
 } /* namespace neural */

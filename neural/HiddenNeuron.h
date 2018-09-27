@@ -8,13 +8,21 @@
 #ifndef HIDDENNEURON_H_
 #define HIDDENNEURON_H_
 
+#include <vector>
 #include "AbstractNeuron.h"
+#include "Synapse.h"
+#include "Layer.h"
+
+using namespace std;
 
 namespace neural {
 
 class HiddenNeuron: public AbstractNeuron {
+private:
+	vector<Synapse*> synapses;
+	double bias;
 public:
-	HiddenNeuron();
+	HiddenNeuron(Layer layer, double bias);
 	virtual ~HiddenNeuron();
 };
 

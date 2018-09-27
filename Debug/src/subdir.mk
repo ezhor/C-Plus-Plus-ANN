@@ -4,13 +4,13 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 CPP_SRCS += \
-../src/ANN.cpp 
+../src/C-Plus-Plus-ANN.cpp 
 
 OBJS += \
-./src/ANN.o 
+./src/C-Plus-Plus-ANN.o 
 
 CPP_DEPS += \
-./src/ANN.d 
+./src/C-Plus-Plus-ANN.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes
