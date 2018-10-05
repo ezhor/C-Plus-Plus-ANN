@@ -5,14 +5,13 @@
  *      Author: ezhor
  */
 
-#include <random>
 #include "AbstractNeuron.h"
+
+#include <random>
 
 namespace neural {
 
 AbstractNeuron::AbstractNeuron() {
-	// TODO Auto-generated constructor stub
-
 }
 
 AbstractNeuron::~AbstractNeuron() {

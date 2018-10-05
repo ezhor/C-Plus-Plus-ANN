@@ -8,7 +8,7 @@
 #ifndef SYNAPSE_H_
 #define SYNAPSE_H_
 
-#include "PropagationInterface.h"
+#include "../interface/PropagationInterface.h"
 
 namespace neural {
 

@@ -5,7 +5,7 @@
  *      Author: ezhor
  */
 
-#include "InputNeuron.h"
+#include "../neuron/InputNeuron.h"
 
 #include <iostream>
 using namespace std;

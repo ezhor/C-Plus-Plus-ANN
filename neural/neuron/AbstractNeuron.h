@@ -5,10 +5,10 @@
  *      Author: ezhor
  */
 
-#ifndef ABSTRACTNEURON_H_
-#define ABSTRACTNEURON_H_
+#ifndef NEURON_ABSTRACTNEURON_H_
+#define NEURON_ABSTRACTNEURON_H_
 
-#include "PropagationInterface.h"
+#include "../interface/PropagationInterface.h"
 
 namespace neural {
 
@@ -22,4 +22,4 @@ public:
 
 } /* namespace neural */
 
-#endif /* ABSTRACTNEURON_H_ */
+#endif /* NEURON_ABSTRACTNEURON_H_ */

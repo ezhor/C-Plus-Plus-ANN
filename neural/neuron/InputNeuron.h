@@ -5,10 +5,10 @@
  *      Author: ezhor
  */
 
-#ifndef INPUTNEURON_H_
-#define INPUTNEURON_H_
+#ifndef NEURON_INPUTNEURON_H_
+#define NEURON_INPUTNEURON_H_
 
-#include "AbstractNeuron.h"
+#include "../neuron/AbstractNeuron.h"
 
 namespace neural {
 
@@ -31,4 +31,4 @@ public:
 
 } /* namespace neural */
 
-#endif /* INPUTNEURON_H_ */
+#endif /* NEURON_INPUTNEURON_H_ */

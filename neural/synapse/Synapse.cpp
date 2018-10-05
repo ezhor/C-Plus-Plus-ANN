@@ -17,7 +17,6 @@ Synapse::Synapse(PropagationInterface *propagation, double weight) {
 }
 
 Synapse::~Synapse() {
-	delete propagation;
 }
 
 double Synapse::propagate(){
