@@ -23,10 +23,10 @@ class HiddenNeuron: public AbstractNeuron {
 private:
 	vector<Synapse*> synapses;
 	ActivationFunctionInterface* activationFunction;
-	double bias;
+	double* bias;
 	void createSynapses(AbstractLayer* layer);
 public:
-	HiddenNeuron(AbstractLayer* layer, ActivationFunctionInterface* activationFunction, double bias);
+	HiddenNeuron(AbstractLayer* previousLayer, ActivationFunctionInterface* activationFunction, double* bias);
 	virtual ~HiddenNeuron();
 	virtual double propagate();
 

@@ -11,10 +11,10 @@
 
 namespace neural {
 
-HiddenNeuron::HiddenNeuron(AbstractLayer* layer, ActivationFunctionInterface* activationFunction, double bias) {
+HiddenNeuron::HiddenNeuron(AbstractLayer* previousLayer, ActivationFunctionInterface* activationFunction, double* bias) {
 	this->bias = bias;
 	this->activationFunction = activationFunction;
-	createSynapses(layer);
+	createSynapses(previousLayer);
 }
 
 HiddenNeuron::~HiddenNeuron() {
@@ -29,13 +29,13 @@ double HiddenNeuron::propagate(){
 	for (unsigned int i = 0; i < this->synapses.size(); ++i) {
 		result += this->synapses.at(i)->propagate();
 	}
-	return this->activationFunction->calculate(result + this->bias);
+	return this->activationFunction->calculate(result + *(this->bias));
 }
 
-void HiddenNeuron::createSynapses(AbstractLayer* layer){
-	this->synapses = vector<Synapse*>(layer->getSize());
-	for (unsigned int i = 0; i < layer->getSize(); i++) {
-		synapses.at(i) = new Synapse(layer->getNeuron(i), randomWeight());
+void HiddenNeuron::createSynapses(AbstractLayer* previousLayer){
+	this->synapses = vector<Synapse*>(previousLayer->getSize());
+	for (unsigned int i = 0; i < previousLayer->getSize(); i++) {
+		synapses.at(i) = new Synapse(previousLayer->getNeuron(i), randomWeight());
 	}
 }
 
