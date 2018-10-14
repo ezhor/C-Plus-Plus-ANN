@@ -10,14 +10,20 @@
 
 #include "AbstractLayer.h"
 #include "../interface/ActivationFunctionInterface.h"
+#include "../neuron/BiasNeuron.h"
 
 namespace neural {
 
 class HiddenLayer: public AbstractLayer {
 private:
-	void createNeurons(unsigned int numberOfNeurons, AbstractLayer* previousLayer, ActivationFunctionInterface* activationFunction, double* bias);
+	void createNeurons(unsigned int numberOfNeurons,
+			AbstractLayer* previousLayer,
+			ActivationFunctionInterface* activationFunction,
+			BiasNeuron* biasNeuron);
 public:
-	HiddenLayer(unsigned int numberOfNeurons, AbstractLayer* previousLayer, ActivationFunctionInterface* activationFunction, double* bias);
+	HiddenLayer(unsigned int numberOfNeurons, AbstractLayer* previousLayer,
+			ActivationFunctionInterface* activationFunction,
+			BiasNeuron* biasNeuron);
 	virtual ~HiddenLayer();
 };
 

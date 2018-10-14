@@ -6,8 +6,6 @@
  */
 
 #include "Synapse.h"
-#include <iostream>
-using namespace std;
 
 namespace neural {
 

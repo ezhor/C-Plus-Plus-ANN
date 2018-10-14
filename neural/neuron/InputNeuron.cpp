@@ -7,9 +7,6 @@
 
 #include "../neuron/InputNeuron.h"
 
-#include <iostream>
-using namespace std;
-
 namespace neural {
 
 InputNeuron::InputNeuron() {

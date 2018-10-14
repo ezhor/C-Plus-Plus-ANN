@@ -1,12 +1,12 @@
 /*
- * HiddenNeuron.h
+ * OutputNeuron.h
  *
  *  Created on: 5 sept. 2018
  *      Author: ezhor
  */
 
-#ifndef NEURON_HIDDENNEURON_H_
-#define NEURON_HIDDENNEURON_H_
+#ifndef NEURON_OUTPUTNEURON_H_
+#define NEURON_OUTPUTNEURON_H_
 
 #include <vector>
 
@@ -20,15 +20,15 @@ using namespace std;
 
 namespace neural {
 
-class HiddenNeuron: public AbstractNeuron {
+class OutputNeuron: public AbstractNeuron {
 private:
 	vector<Synapse*> synapses;
 	ActivationFunctionInterface* activationFunction;
 	double* bias;
 	void createSynapses(AbstractLayer* previousLayer, BiasNeuron* biasNeuron);
 public:
-	HiddenNeuron(AbstractLayer* previousLayer, ActivationFunctionInterface* activationFunction, BiasNeuron* biasNeuron);
-	virtual ~HiddenNeuron();
+	OutputNeuron(AbstractLayer* previousLayer, ActivationFunctionInterface* activationFunction, BiasNeuron* biasNeuron);
+	virtual ~OutputNeuron();
 	virtual double propagate();
 
 	vector<Synapse*>& getSynapses(){
