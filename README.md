@@ -1,5 +1,5 @@
-# C-Plus-Plus-ANN
-A strongly object oriented implementation of a deep learning neural network in C++.
+# rANNcor
+rANNcor (recursively stands for *rANNcor Artificial Neural Network Core*) is a strongly object oriented implementation of a deep learning neural network in C++.
 
 This is an improved version of [my deep learning neural network implemented in Java](https://github.com/ezhor/JavaANN).
 
